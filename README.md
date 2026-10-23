@@ -18,6 +18,7 @@ Each top-level directory is a package whose contents mirror `$HOME`
 | `xdg`        | `mimeapps.list`, `user-dirs.dirs`                           |
 | `kde`        | Plasma/KWin/theme/shortcuts/panel layout + KDE app configs  |
 | `polycode`   | PolyCode AppImage launcher + icon (AppImage itself not tracked) |
+| `elecwhat`   | ElecWhat launcher override using the official WhatsApp icon (copy of the packaged `.desktop`; re-sync if `elecwhat-bin` changes it) |
 
 ## Install
 

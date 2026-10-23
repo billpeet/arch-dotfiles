@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=ElecWhat
+Exec=/usr/bin/elecwhat %U
+Terminal=false
+Type=Application
+Icon=whatsapp-official
+StartupWMClass=elecwhat
+GenericName=WhatsApp Client
+Comment=Simple desktop whatsapp client for linux
+MimeType=x-scheme-handler/whatsapp;
+Categories=Network;Chat;InstantMessaging;X-WhatsApp;
