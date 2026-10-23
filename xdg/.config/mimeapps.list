@@ -1,0 +1,6 @@
+
+[Default Applications]
+x-scheme-handler/mailto=superhuman.desktop
+x-scheme-handler/claude-cli=claude-code-url-handler.desktop
+x-scheme-handler/superhuman=superhuman.desktop
+x-scheme-handler/wispr-flow=wispr-flow.desktop
