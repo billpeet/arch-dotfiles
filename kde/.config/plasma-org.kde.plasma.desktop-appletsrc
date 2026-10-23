@@ -59,7 +59,7 @@ DialogHeight=630
 DialogWidth=810
 
 [Containments][3][Applets][29][Configuration][General]
-launchers=applications:systemsettings.desktop,applications:helium.desktop,file:///tmp/.mount_PolyCorrQzh1/polycode-electron,applications:org.kde.discover.desktop,preferred://filemanager,applications:elecwhat.desktop,applications:chrome-ompifgpmddkgmclendfeacglnodjjndh-Default.desktop,applications:signal.desktop,applications:discord.desktop,applications:code-oss.desktop,applications:chrome-iiibmklkgjogbfabonfcpgooimpjihfe-Default.desktop
+launchers=applications:systemsettings.desktop,applications:helium.desktop,applications:polycode.desktop,applications:org.kde.discover.desktop,preferred://filemanager,applications:elecwhat.desktop,applications:chrome-ompifgpmddkgmclendfeacglnodjjndh-Default.desktop,applications:signal.desktop,applications:discord.desktop,applications:code-oss.desktop,applications:chrome-iiibmklkgjogbfabonfcpgooimpjihfe-Default.desktop
 
 [Containments][3][Applets][33]
 immutability=1

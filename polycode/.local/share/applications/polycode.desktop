@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=PolyCode
+Comment=Desktop app for orchestrating multiple Claude Code sessions
+Exec=/home/bill/.local/bin/PolyCode.AppImage %U
+Icon=polycode-electron
+StartupWMClass=polycode-electron
+Type=Application
+Categories=Development;
+Terminal=false

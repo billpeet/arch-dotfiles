@@ -17,6 +17,7 @@ Each top-level directory is a package whose contents mirror `$HOME`
 | `fontconfig` | `fonts.conf`                                                |
 | `xdg`        | `mimeapps.list`, `user-dirs.dirs`                           |
 | `kde`        | Plasma/KWin/theme/shortcuts/panel layout + KDE app configs  |
+| `polycode`   | PolyCode AppImage launcher + icon (AppImage itself not tracked) |
 
 ## Install
 
