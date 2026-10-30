@@ -26,6 +26,10 @@ location=0
 plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
 
+[Containments][2][ConfigDialog]
+DialogHeight=630
+DialogWidth=810
+
 [Containments][3]
 activityId=
 formfactor=2
@@ -34,17 +38,6 @@ lastScreen=0
 location=4
 plugin=org.kde.panel
 wallpaperplugin=org.kde.image
-
-[Containments][3][Applets][23]
-immutability=1
-plugin=org.kde.plasma.digitalclock
-
-[Containments][3][Applets][23][Configuration]
-popupHeight=400
-popupWidth=560
-
-[Containments][3][Applets][23][Configuration][Appearance]
-fontWeight=400
 
 [Containments][3][Applets][24]
 immutability=1
@@ -59,7 +52,7 @@ DialogHeight=630
 DialogWidth=810
 
 [Containments][3][Applets][29][Configuration][General]
-launchers=applications:systemsettings.desktop,applications:helium.desktop,applications:polycode.desktop,applications:org.kde.discover.desktop,preferred://filemanager,applications:elecwhat.desktop,applications:chrome-ompifgpmddkgmclendfeacglnodjjndh-Default.desktop,applications:signal.desktop,applications:discord.desktop,applications:code-oss.desktop,applications:chrome-iiibmklkgjogbfabonfcpgooimpjihfe-Default.desktop
+launchers=applications:systemsettings.desktop,applications:helium.desktop,applications:polycode.desktop,applications:org.kde.discover.desktop,preferred://filemanager,applications:chrome-ompifgpmddkgmclendfeacglnodjjndh-Default.desktop,applications:signal.desktop,applications:elecwhat.desktop,applications:discord.desktop,applications:code-oss.desktop,applications:chrome-iiibmklkgjogbfabonfcpgooimpjihfe-Default.desktop,applications:com.bambulab.BambuStudio.desktop
 
 [Containments][3][Applets][33]
 immutability=1
@@ -171,7 +164,7 @@ extraItems=org.kde.plasma.vault,org.kde.plasma.clipboard,org.kde.plasma.manage-i
 knownItems=org.kde.plasma.vault,org.kde.plasma.clipboard,org.kde.plasma.manage-inputmethod,org.kde.plasma.keyboardlayout,org.kde.plasma.notifications,org.kde.plasma.networkmanagement,org.kde.plasma.devicenotifier,org.kde.plasma.dwellclicker,org.kde.plasma.printmanager,org.kde.plasma.brightness,org.kde.plasma.volume,org.kde.plasma.bluetooth,org.kde.kscreen,org.kde.plasma.keyboardindicator,org.kde.kupapplet,org.kde.plasma.cameraindicator,org.kde.plasma.mediacontroller,org.kde.plasma.battery,org.kde.plasma.weather
 
 [Containments][3][General]
-AppletOrder=33;5;29;7;8;23;24
+AppletOrder=33;5;29;7;8;24
 
 [Containments][34]
 activityId=
@@ -202,7 +195,7 @@ immutability=1
 plugin=org.kde.plasma.icontasks
 
 [Containments][34][Applets][37][Configuration][General]
-launchers=applications:systemsettings.desktop,applications:helium.desktop,applications:polycode.desktop,applications:org.kde.discover.desktop,preferred://filemanager,applications:elecwhat.desktop,applications:chrome-ompifgpmddkgmclendfeacglnodjjndh-Default.desktop,applications:signal.desktop,applications:discord.desktop,applications:code-oss.desktop,applications:chrome-iiibmklkgjogbfabonfcpgooimpjihfe-Default.desktop
+launchers=applications:systemsettings.desktop,applications:helium.desktop,applications:polycode.desktop,preferred://filemanager,applications:chrome-ompifgpmddkgmclendfeacglnodjjndh-Default.desktop,applications:elecwhat.desktop,applications:signal.desktop,applications:discord.desktop,applications:code-oss.desktop,applications:chrome-iiibmklkgjogbfabonfcpgooimpjihfe-Default.desktop
 
 [Containments][34][Applets][38]
 immutability=1
@@ -298,21 +291,101 @@ plugin=org.kde.plasma.bluetooth
 extraItems=org.kde.plasma.vault,org.kde.plasma.clipboard,org.kde.plasma.manage-inputmethod,org.kde.plasma.keyboardlayout,org.kde.plasma.notifications,org.kde.plasma.networkmanagement,org.kde.plasma.devicenotifier,org.kde.plasma.dwellclicker,org.kde.plasma.printmanager,org.kde.plasma.brightness,org.kde.plasma.volume,org.kde.plasma.bluetooth,org.kde.kscreen,org.kde.plasma.keyboardindicator,org.kde.kupapplet,org.kde.plasma.cameraindicator,org.kde.plasma.mediacontroller,org.kde.plasma.battery,org.kde.plasma.weather
 knownItems=org.kde.plasma.vault,org.kde.plasma.clipboard,org.kde.plasma.manage-inputmethod,org.kde.plasma.keyboardlayout,org.kde.plasma.notifications,org.kde.plasma.networkmanagement,org.kde.plasma.devicenotifier,org.kde.plasma.dwellclicker,org.kde.plasma.printmanager,org.kde.plasma.brightness,org.kde.plasma.volume,org.kde.plasma.bluetooth,org.kde.kscreen,org.kde.plasma.keyboardindicator,org.kde.kupapplet,org.kde.plasma.cameraindicator,org.kde.plasma.mediacontroller,org.kde.plasma.battery,org.kde.plasma.weather
 
-[Containments][34][Applets][54]
-immutability=1
-plugin=org.kde.plasma.digitalclock
-
-[Containments][34][Applets][54][Configuration]
-popupHeight=375
-popupWidth=525
-
 [Containments][34][Applets][55]
 immutability=1
 plugin=org.kde.plasma.showdesktop
 
 [Containments][34][General]
-AppletOrder=35;36;37;38;39;54;55
+AppletOrder=35;36;37;38;39;55
+
+[Containments][60]
+activityId=
+formfactor=2
+immutability=1
+lastScreen=0
+location=3
+plugin=org.kde.panel
+wallpaperplugin=org.kde.image
+
+[Containments][60][Applets][61]
+immutability=1
+plugin=plasmusic-toolbar
+
+[Containments][60][Applets][61][Configuration]
+popupHeight=178
+popupWidth=236
+
+[Containments][60][Applets][61][Configuration][General]
+playPauseControlInPanel=true
+skipBackwardControlInPanel=true
+skipForwardControlInPanel=true
+songTextFixedWidth=260
+useAlbumCoverAsPanelIcon=true
+useSongTextFixedWidth=true
+
+[Containments][60][Applets][62]
+immutability=1
+plugin=org.kde.plasma.panelspacer
+
+[Containments][60][Applets][63]
+immutability=1
+plugin=org.kde.plasma.digitalclock
+
+[Containments][60][Applets][63][Configuration]
+popupHeight=451
+popupWidth=525
+
+[Containments][60][Applets][64]
+immutability=1
+plugin=org.kde.plasma.panelspacer
+
+[Containments][60][General]
+AppletOrder=61;62;63;64
+
+[Containments][65]
+activityId=
+formfactor=2
+immutability=1
+lastScreen=1
+location=3
+plugin=org.kde.panel
+wallpaperplugin=org.kde.image
+
+[Containments][65][Applets][66]
+immutability=1
+plugin=plasmusic-toolbar
+
+[Containments][65][Applets][66][Configuration]
+popupHeight=178
+popupWidth=236
+
+[Containments][65][Applets][66][Configuration][General]
+playPauseControlInPanel=true
+skipBackwardControlInPanel=true
+skipForwardControlInPanel=true
+songTextFixedWidth=260
+useAlbumCoverAsPanelIcon=true
+useSongTextFixedWidth=true
+
+[Containments][65][Applets][67]
+immutability=1
+plugin=org.kde.plasma.panelspacer
+
+[Containments][65][Applets][68]
+immutability=1
+plugin=org.kde.plasma.digitalclock
+
+[Containments][65][Applets][68][Configuration]
+popupHeight=451
+popupWidth=525
+
+[Containments][65][Applets][69]
+immutability=1
+plugin=org.kde.plasma.panelspacer
+
+[Containments][65][General]
+AppletOrder=66;67;68;69
 
 [ScreenMapping]
-itemsOnDisabledScreens=
-screenMapping=desktop:/chrome-ompifgpmddkgmclendfeacglnodjjndh-Default.desktop,0,59f2e46f-311a-4473-bafc-7946374bf6c9,desktop:/chrome-iiibmklkgjogbfabonfcpgooimpjihfe-Default.desktop,0,59f2e46f-311a-4473-bafc-7946374bf6c9
+itemsOnDisabledScreens=0,59f2e46f-311a-4473-bafc-7946374bf6c9,2,desktop:/chrome-ompifgpmddkgmclendfeacglnodjjndh-Default.desktop,desktop:/chrome-iiibmklkgjogbfabonfcpgooimpjihfe-Default.desktop
+screenMapping=desktop:/chrome-ompifgpmddkgmclendfeacglnodjjndh-Default.desktop,1,59f2e46f-311a-4473-bafc-7946374bf6c9,desktop:/chrome-iiibmklkgjogbfabonfcpgooimpjihfe-Default.desktop,1,59f2e46f-311a-4473-bafc-7946374bf6c9
