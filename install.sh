@@ -13,6 +13,10 @@
 #
 # Existing files that differ from the repo are moved to
 # ~/.dotfiles-backup/<timestamp>/ before being replaced.
+#
+# A directory containing a `.link-whole-dir` marker is linked as a single
+# directory symlink instead. Needed for KDE packages (global themes etc.):
+# KPackage rejects files that are symlinks pointing outside the package.
 
 set -euo pipefail
 
@@ -52,13 +56,15 @@ link_file() {
     fi
     [[ -d $(dirname "$dest") ]] || run mkdir -p "$(dirname "$dest")"
     if [[ -e $dest || -L $dest ]]; then
-        if [[ ! -L $dest ]] && cmp -s "$src" "$dest"; then
+        if [[ ! -L $dest && ! -d $src ]] && cmp -s "$src" "$dest"; then
             echo "adopt    $rel (identical, replacing with link)"
         else
             echo "backup   $rel -> $BACKUP_DIR/$rel"
             run mkdir -p "$(dirname "$BACKUP_DIR/$rel")"
             run cp -a "$dest" "$BACKUP_DIR/$rel"
         fi
+        # A symlink can't atomically replace a real directory; it's backed up above.
+        if [[ -d $dest && ! -L $dest ]]; then run rm -rf "$dest"; fi
     else
         echo "link     $rel"
     fi
@@ -73,7 +79,9 @@ status_file() {
         echo "OTHER    $rel -> $(readlink "$dest")"
     elif [[ -e $dest ]]; then
         # An app replaced our symlink with a real file (e.g. atomic save).
-        if cmp -s "$src" "$dest"; then
+        if [[ -d $src ]]; then
+            echo "UNLINKED $rel (real directory; re-run install.sh)"
+        elif cmp -s "$src" "$dest"; then
             echo "UNLINKED $rel (same content; re-run install.sh)"
         else
             echo "UNLINKED $rel (CONTENT DIFFERS; diff before re-linking)"
@@ -89,5 +97,7 @@ while read -r pkg; do
     while IFS= read -r -d '' src; do
         rel=${src#"$DOTFILES/$pkg/"}
         "${MODE}_file" "$src" "$HOME/$rel" "$rel"
-    done < <(find "$DOTFILES/$pkg" \( -type f -o -type l \) -print0 | sort -z)
+    done < <(find "$DOTFILES/$pkg" -mindepth 1 \
+                 \( -type d -exec test -e '{}/.link-whole-dir' \; -prune -print0 \) \
+                 -o \( -type f -o -type l \) -print0 | sort -z)
 done < <(packages "$@")
