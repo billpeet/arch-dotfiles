@@ -39,6 +39,25 @@ non-KDE tools save by writing a temp file and renaming over it, which
 replaces the symlink with a regular file; `./install.sh status` flags those
 as `UNLINKED`.
 
+KDE packages (global themes etc.) must be linked as whole directories
+(KPackage rejects files that symlink outside the package), so those
+directories contain a `.link-whole-dir` marker that `install.sh` honours.
+
+Extra packages the config expects:
+
+```sh
+sudo pacman -S inter-font ttf-jetbrains-mono-nerd   # default UI/mono fonts
+yay -S plasma6-applets-plasmusic-toolbar             # now-playing widget in the top bar
+```
+
+## Themes live on branches
+
+`master` holds everything that isn't the look: layout, panels, shortcuts,
+fonts, app configs. Colour schemes, global themes, icons, cursors, wallpaper
+and terminal colours live on `rice/<name>` branches (e.g. `rice/catppuccin`)
+that sit on top of master. Make config changes on master and merge master
+into the rice branch; keep only theming commits on the rice branch.
+
 ## Adding a file
 
 ```sh
